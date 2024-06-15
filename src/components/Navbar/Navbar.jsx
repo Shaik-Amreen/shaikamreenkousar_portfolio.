@@ -6,7 +6,7 @@ import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { motion } from 'framer-motion'
 export default function Navbar() {
 
-    
+
 
     const { theme, toggleTheme } = useTheme()
     const colors = Colors[theme]
@@ -40,8 +40,16 @@ export default function Navbar() {
                                 <a href="#" class="block py-2 pr-4 pl-3  hover:bg-gray-50 dark:hover:bg-gray-800 ">About</a>
                             </MenuItem>
 
+                            <MenuItem >
+                                <a href="#" class="block py-2 pr-4 pl-3  hover:bg-gray-50 dark:hover:bg-gray-800 ">Tech Stack</a>
+                            </MenuItem>
+
                             <MenuItem>
                                 <a href="#" class="block py-2 pr-4 pl-3  hover:bg-gray-50 dark:hover:bg-gray-800 ">Work Experience</a>
+                            </MenuItem>
+
+                            <MenuItem >
+                                <a href="#" class="block py-2 pr-4 pl-3  hover:bg-gray-50 dark:hover:bg-gray-800 ">Services</a>
                             </MenuItem>
 
                             <MenuItem>

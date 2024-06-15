@@ -51,6 +51,21 @@ background: radial-gradient(circle, rgba(247,208,240,1) 0%, rgba(201,245,255,1) 
     /* make space for the gradient border */
 }
 
+.gradient-outline {
+
+    background: #121FCF;
+    background: linear-gradient(to right, white, rgba(61, 91, 157, 1),
+            rgba(17, 24, 39, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #e6e2f8;
+    /* text-shadow: 1px 1px 5px rgb(31, 90, 218); */
+    /* text-shadow: 1px 3px 0px white; */
+    color: rgb(61, 91, 157);
+    /* font-family: Impact, Charcoal, sans-serif; */
+}
+
 .positionTextGradient {
 
     /* background: #FFFFFF;

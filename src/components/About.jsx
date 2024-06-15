@@ -18,18 +18,19 @@
 
 
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import CursorBlinker from "./reusable/CursorBlinker";
 
 export default function About() {
     const textIndex = useMotionValue(0);
     const texts = [
+        " Full Stack Developer at Infobell IT - AMD.",
         " Freelancer.",
-        " Full Stack Developer at Infobell IT - AMD",
-        " Ui Designer",
-        " SASS Developer",
-        " Founder of arikya.in",
-
+        " Ui Designer.",
+        " SASS Developer.",
+        " Founder of arikya.in.",
+        " Frontend Developer .", " Backend Developer .", " React Developer .", " Node.js Developer .",
+        " Angular Developer .", " React Native Developer.", " Web Developer.", " Mobile App Developer"
     ];
 
 
@@ -41,6 +42,19 @@ export default function About() {
         baseText.get().slice(0, latest)
     );
     const updatedThisRound = useMotionValue(true);
+    const [isPageFocused, setIsPageFocused] = useState(false);
+
+    useEffect(() => {
+        const handleVisibilityChange = () => {
+            setIsPageFocused(document.visibilityState === 'visible');
+        };
+
+        window.addEventListener('visibilitychange', handleVisibilityChange);
+
+        return () => {
+            window.removeEventListener('visibilitychange', handleVisibilityChange);
+        };
+    }, []);
 
     useEffect(() => {
         animate(count, 60, {
@@ -64,15 +78,17 @@ export default function About() {
             }
         });
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [isPageFocused]);
 
-    return <div className='md:h-screen px-5 md:px-20 lg:px-40 py-20 flex '>
+    return <div className='md:h-screen px-5 md:px-20 lg:px-40 h-screen items-center flex'>
         <div>
-            <motion.h1 className='text-6xl positionTextGradient'>About</motion.h1>
-
-            <div className="mt-4">
-                I am  <br />
-                <motion.span className="inline  text-4xl">{displayText}</motion.span>
+            <motion.h1 className='text-3xl md:text-6xl positionTextGradient'>About</motion.h1>
+            <div className="mt-5 text-xl md:text-2xl">
+                Experienced Full Stack Developer with 3+ years of hands-on experience proficient in crafting robust and scalable WEB and MOBILE applications. Proven track record of thriving in collaborative team with an apt for adapting trending technologies to deliver top-notch solutions.
+            </div>
+            <div className="mt-10">
+                <div className="text-2xl md:text-3xl pb-3">I'm a </div>
+                <motion.span className="inline text-4xl md:text-5xl poppins-semibold gradient-outline">{displayText}</motion.span>
                 <CursorBlinker />
             </div>
         </div>
