@@ -80,10 +80,10 @@ export default function About() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isPageFocused]);
 
-    return <div className='md:h-screen px-5 md:px-20 lg:px-40 h-screen items-center flex'>
+    return <div className='md:h-screen px-5 md:px-20 lg:px-40 md:items-center  flex'>
         <div>
             <motion.h1 className='text-3xl md:text-6xl positionTextGradient'>About</motion.h1>
-            <div className="mt-5 text-xl md:text-2xl">
+            <div className="mt-5 text-lg md:text-2xl">
                 Experienced Full Stack Developer with 3+ years of hands-on experience proficient in crafting robust and scalable WEB and MOBILE applications. Proven track record of thriving in collaborative team with an apt for adapting trending technologies to deliver top-notch solutions.
             </div>
             <div className="mt-10">
