@@ -20,6 +20,8 @@
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect, useState } from "react";
 import CursorBlinker from "./reusable/CursorBlinker";
+import { slideIn } from "./reusable/motion";
+
 
 export default function About() {
     const textIndex = useMotionValue(0);
@@ -33,6 +35,10 @@ export default function About() {
         " Angular Developer .", " React Native Developer.", " Web Developer.", " Mobile App Developer"
     ];
 
+
+
+
+    const textVariants = slideIn("right")
 
 
     const baseText = useTransform(textIndex, (latest) => texts[latest] || "");
@@ -80,18 +86,27 @@ export default function About() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isPageFocused]);
 
-    return <div className='md:h-screen px-5 md:px-20 lg:px-40 md:items-center  flex'>
+    return <div className='curve shadow h-screen px-5 md:px-20 lg:px-40 items-center  flex ' >
         <div>
-            <motion.h1 className='text-3xl md:text-6xl positionTextGradient'>About</motion.h1>
-            <div className="mt-5 text-lg md:text-2xl">
+            <motion.h1 variants={textVariants} initial="hidden"
+                whileInView="show" className="text-slate-300 text-xl poppins-regular tracking-widest">INTRODUCTION</motion.h1>
+            <motion.h1 variants={textVariants} initial="hidden"
+                whileInView="show" className='text-3xl md:text-6xl -mx-2 mt-5'>Overview.</motion.h1>
+            <div className="mt-5 text-lg md:text-xl">
                 Experienced Full Stack Developer with 3+ years of hands-on experience proficient in crafting robust and scalable WEB and MOBILE applications. Proven track record of thriving in collaborative team with an apt for adapting trending technologies to deliver top-notch solutions.
             </div>
             <div className="mt-10">
-                <div className="text-2xl md:text-3xl pb-3">I'm a </div>
-                <motion.span className="inline text-4xl md:text-5xl poppins-semibold gradient-outline">{displayText}</motion.span>
+                <div className="text-xl md:text-3xl pb-3">I'm a </div>
+                <motion.span className="inline text-4xl poppins-semibold gradient-outline">{displayText}</motion.span>
                 <CursorBlinker />
             </div>
-        </div>
+
+            <br />
+
+            <div className="text-lg md:text-4xl">
+                Let's work together to bring your ideas to life !
+            </div>        </div>
+           
     </div>
 }
 

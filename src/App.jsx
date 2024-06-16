@@ -5,6 +5,8 @@ import Introduction from './components/Introduction'
 import About from './components/About'
 import { useTheme } from './components/Theme/ThemeContext'
 import Colors from './Colors'
+import WorkExperience from './components/WorkExperience'
+import TechStack from './components/TechStack'
 
 export default function App() {
   const { theme } = useTheme()
@@ -17,6 +19,8 @@ export default function App() {
       <Navbar />
       <Introduction />
       <About />
+      <TechStack/>
+      <WorkExperience />
     </div>
 
 

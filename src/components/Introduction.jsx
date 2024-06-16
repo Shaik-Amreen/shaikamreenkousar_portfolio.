@@ -50,8 +50,8 @@ const buttonVariants = {
 
 const Introduction = () => {
     return (
-        <div className="introBody " style={{ padding: "0rem"}}>
-            <div className="md:px-20 lg:px-40  text-center  md:text-left  flex flex-wrap justify-evenly md:items-center introPart" style={{ paddingTop: '0rem' }} >
+        <div className="introBody" style={{ padding: "0rem"}}>
+            <div className="md:px-20 lg:px-24  text-center  md:text-left  flex flex-wrap justify-evenly md:items-center introPart" style={{ paddingTop: '0rem' }} >
 
                 <div style={{ zIndex: 0 }} className="flex-1 ">
                     <motion.div

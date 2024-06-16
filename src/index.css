@@ -51,6 +51,12 @@ background: radial-gradient(circle, rgba(247,208,240,1) 0%, rgba(201,245,255,1) 
     /* make space for the gradient border */
 }
 
+.curve {
+    border-bottom-left-radius:100px;
+    border-bottom-right-radius:100px;
+
+}
+
 .gradient-outline {
 
     background: #121FCF;
@@ -63,7 +69,13 @@ background: radial-gradient(circle, rgba(247,208,240,1) 0%, rgba(201,245,255,1) 
     /* text-shadow: 1px 1px 5px rgb(31, 90, 218); */
     /* text-shadow: 1px 3px 0px white; */
     color: rgb(61, 91, 157);
+
     /* font-family: Impact, Charcoal, sans-serif; */
+}
+
+.techItem:hover{
+    scale: 1.2;
+    cursor: pointer;
 }
 
 .positionTextGradient {
@@ -88,6 +100,30 @@ background: radial-gradient(circle, rgba(247,208,240,1) 0%, rgba(201,245,255,1) 
 
 .introPart {
     height: calc(100vh - 200px) !important;
+}
+
+
+
+
+.gradient-border {
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    background-size: 150% 150%;
+    animation: animatedgradient 2s ease infinite;
+}
+
+
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 @media (max-width: 575px) {
