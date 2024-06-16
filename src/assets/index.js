@@ -7,6 +7,10 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
+import javascript_cert from "./certifications/javascript_cert.png";
+
+
+
 import html from "./tech/frontend/html.png";
 import css from "./tech/frontend/css.png";
 import javascript from "./tech/frontend/javascript.png";
@@ -78,6 +82,8 @@ export {
   web,
   github,
   menu,
+
+  javascript_cert,
 
   python,
   java,

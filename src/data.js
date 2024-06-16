@@ -4,6 +4,8 @@ import {
     creator,
     web,
 
+    javascript_cert,
+
     es6,
     javascript,
     typescript,
@@ -148,9 +150,9 @@ const technologies = [
             { name: "Figma", icon: figma },
         ]
     },
-   
-   
-  
+
+
+
     {
         category: "Programming Languages",
         list: [
@@ -277,6 +279,17 @@ const experiences = [
     },
 ];
 
+
+
+const certifications = [
+    { name: 'Javascript', link: "https://www.hackerrank.com/certificates/ab632039636e", image: javascript_cert },
+    { name: 'Javascript (Intermediate)', link: "https://www.hackerrank.com/certificates/20eb356e5db2", image: javascript_cert },
+    { name: 'Problem solving', link: "https://www.hackerrank.com/certificates/fa9ea78d6e05", image: javascript_cert },
+    { name: 'Python', link: "https://www.hackerrank.com/certificates/17795979b091", image: javascript_cert },
+    { name: 'SQL-Basic', link: "https://www.hackerrank.com/certificates/3455fe4f7f6f", image: javascript_cert },
+    { name: 'SQL-Intermediate', link: "https://www.hackerrank.com/certificates/6b69f49697dd", image: javascript_cert },
+]
+
 const testimonials = [
     {
         testimonial:
@@ -370,4 +383,4 @@ const projects = [
     },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, certifications, testimonials, projects };
