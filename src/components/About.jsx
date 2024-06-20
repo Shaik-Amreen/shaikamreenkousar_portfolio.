@@ -95,7 +95,7 @@ export default function About() {
             <div className="mt-5 text-lg md:text-xl">
                 Experienced Full Stack Developer with 3+ years of hands-on experience proficient in crafting robust and scalable WEB and MOBILE applications. Proven track record of thriving in collaborative team with an apt for adapting trending technologies to deliver top-notch solutions.
             </div>
-            <div className="mt-10">
+            <div className="mt-10 text-center md:text-left">
                 <div className="text-xl md:text-3xl pb-3">I'm a </div>
                 <motion.span className="inline text-4xl poppins-semibold gradient-outline">{displayText}</motion.span>
                 <CursorBlinker />
@@ -103,7 +103,7 @@ export default function About() {
 
             <br />
 
-            <div className="text-lg md:text-4xl">
+            <div className="text-lg md:text-4xl text-center md:text-left">
                 Let's work together to bring your ideas to life !
             </div>        </div>
            

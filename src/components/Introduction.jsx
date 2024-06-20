@@ -69,15 +69,16 @@ const Introduction = () => {
                         <motion.h1 className="text-3xl md:text-6xl positionTextGradient mt-5" variants={textVariants}>
                             Full Stack Developer
                         </motion.h1>
-                        <motion.div variants={textVariants} className="buttons mt-5 mb-3 md:mt-10 md:mb-0" style={{ zIndex: 1000 }}>
+                        <motion.div variants={textVariants} className="buttons mt-5 mb-3 md:mt-10 md:mb-0 " style={{ zIndex: 1000 }}>
                             <motion.button
                                 variants={buttonVariants}
                                 initial="initial"
                                 whileHover="hover"
                                 whileTap="tap"
-                                className="p-2 px-6 rounded-full custom-gradient-border"
+                                className="p-2 px-6 rounded-full custom-gradient-border flex items-center"
                             >
-                                <motion.h2>Contact</motion.h2>
+                                <motion.h2>Reach out &nbsp;</motion.h2>
+                                <i class='bx bxs-chevron-down-circle '></i>
                             </motion.button>
 
                         </motion.div>
