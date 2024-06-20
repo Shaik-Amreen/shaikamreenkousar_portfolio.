@@ -1,62 +1,80 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
 import { styles } from "./reusable/styles";
-import { zoomIn ,zoomOut} from "./reusable/motion";
+import { zoomIn } from "./reusable/motion";
 import { technologies } from "../data";
 
-
 function TechStack() {
+    const [expanded, setExpanded] = useState(false);
 
-    const textVariants = zoomIn()
+    const textVariants = zoomIn();
 
     const TechCard = ({ tech }) => {
-        return <motion.div  className='techItem flex items-center'>
-            <div className='flex flex-col items-center'>
-                <img
-                    src={tech.icon}
-                    alt={tech.icon}
-                    className='w-10 md:w-16 md:h-20 object-contain'
-                />
-                <span className='text- white mt-2'>{tech.name}</span>
-            </div>
-        </motion.div>
+        return (
+            <motion.div className='techItem flex items-center'>
+                <div className='flex flex-col items-center'>
+                    <img
+                        src={tech.icon}
+                        alt={tech.name}
+                        className='w-10 md:w-16 md:h-20 object-contain'
+                    />
+                    <span className='text-white mt-2'>{tech.name}</span>
+                </div>
+            </motion.div>
+        );
+    };
 
-    }
-
+    const handleToggle = () => {
+        setExpanded(!expanded);
+    };
 
     return (
-        <div className=''>
-            <motion.div variants={textVariants} initial="hidden"
-                whileInView="show" className="mt-14 md:24">
+        <div >
+            <motion.div
+                variants={textVariants}
+                initial="hidden"
+                whileInView="show"
+                className="mt-14 md:24"
+            >
                 <p className={`${styles.sectionSubText} text-slate-300 text-center tracking-widest`}>
                     EXPERTISED
                 </p>
-                <h2 className={`${styles.sectionHeadText}  text-center`}>
+                <h2 className={`${styles.sectionHeadText} text-center`}>
                     Tech Stack
                 </h2>
             </motion.div>
             <div className="gradient-border mx-5 md:mx-20 p-1 rounded mt-10">
                 <div className="darkBackground p-3 py-10 md:p-10 text-white">
-
-                    {
-                        technologies.map(techstack => {
-                            return <div className="mb-10 ">
-                                <span className={`text-slate-300 text-center tracking-widest poppins-regular`}>{techstack.category.toUpperCase()}</span>
+                    {technologies.map((techstack, index) => {
+                        if (!expanded && index > 1) return null; // Show only first two items if not expanded
+                        return (
+                            <div className="mb-10" key={techstack.category}>
+                                <span className={`text-slate-300 text-center tracking-widest poppins-regular`}>
+                                    {techstack.category.toUpperCase()}
+                                </span>
                                 <div className="flex mt-5 flex-wrap gap-10">
-                                    {
-                                        techstack.list.map(tech => {
-                                            return <TechCard tech={tech} />
-                                        })
-                                    }
+                                    {techstack.list.map((tech) => (
+                                        <TechCard key={tech.name} tech={tech} />
+                                    ))}
                                 </div>
                             </div>
-                        })
-                    }
+                        );
+                    })}
+
+                    <div className="text-right mt-5 ">
+                        <button
+                            onClick={handleToggle}
+                            className="custom-gradient-border text-white py-2 px-4 rounded-full ">
+                            {expanded ? 'View Less' : 'View More'}
+                        </button>
+                    </div>
                 </div>
+                
             </div>
+           
         </div>
-    )
+    );
 }
 
-export default TechStack
+export default TechStack;
