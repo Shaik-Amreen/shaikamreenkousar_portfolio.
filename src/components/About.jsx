@@ -21,7 +21,7 @@ import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect, useState } from "react";
 import CursorBlinker from "./reusable/CursorBlinker";
 import { slideIn } from "./reusable/motion";
-
+import AboutImage from '../assets/AboutImage.svg'
 
 export default function About() {
     const textIndex = useMotionValue(0);
@@ -86,8 +86,8 @@ export default function About() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isPageFocused]);
 
-    return <div className='curve shadow h-screen px-5 md:px-20 lg:px-40 items-center  flex ' >
-        <div>
+    return <div className=' h-screen px-5 md:px-20 lg:px-40 items-center md:gap-20   md:flex' >
+        <div className="flex-1">
             <motion.h1 variants={textVariants} initial="hidden"
                 whileInView="show" className="text-slate-300 text-xl poppins-regular tracking-widest">INTRODUCTION</motion.h1>
             <motion.h1 variants={textVariants} initial="hidden"
@@ -95,18 +95,31 @@ export default function About() {
             <div className="mt-5 text-lg md:text-xl">
                 Experienced Full Stack Developer with 3+ years of hands-on experience proficient in crafting robust and scalable WEB and MOBILE applications. Proven track record of thriving in collaborative team with an apt for adapting trending technologies to deliver top-notch solutions.
             </div>
-            <div className="mt-10 text-center md:text-left">
+            {/* <div className="mt-10 text-center md:text-left">
                 <div className="text-xl md:text-3xl pb-3">I'm a </div>
                 <motion.span className="inline text-4xl poppins-semibold gradient-outline">{displayText}</motion.span>
                 <CursorBlinker />
-            </div>
+            </div> */}
 
             <br />
 
-            <div className="text-lg md:text-4xl text-center md:text-left">
+            <div className="text-lg md:text-4xl hidden md:inline-flex md:text-left gradient-outline" style={{lineHeight:"3.3rem"}}>
                 Let's work together to bring your ideas to life !
-            </div>        </div>
-           
+            </div>
+
+
+        </div>
+
+
+        <div className="">
+            <img src={AboutImage} className="h-64" />
+        </div>
+
+        <div className="text-lg md:text-4xl inline-flex md:hidden text-center mt-4 gradient-outline" style={{ lineHeight: "2rem" }}>
+            Let's work together to bring your ideas to life !
+        </div>
+
+
     </div>
 }
 

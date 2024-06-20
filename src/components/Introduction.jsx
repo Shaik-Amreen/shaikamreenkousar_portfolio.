@@ -69,7 +69,7 @@ const Introduction = () => {
                         <motion.h1 className="text-3xl md:text-6xl positionTextGradient mt-5" variants={textVariants}>
                             Full Stack Developer
                         </motion.h1>
-                        <motion.div variants={textVariants} className="buttons mt-5 mb-3 md:mt-10 md:mb-0 " style={{ zIndex: 1000 }}>
+                        <motion.div variants={textVariants} className="buttons mt-5 mb-3 md:mt-10 md:mb-0  justify-center md:justify-start flex " style={{ zIndex: 1000 }}>
                             <motion.button
                                 variants={buttonVariants}
                                 initial="initial"

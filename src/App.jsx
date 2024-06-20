@@ -22,9 +22,11 @@ export default function App() {
       {
         theme == 'dark' && <div style={{ zIndex: 0 }} class="opacity-50 absolute inset-0 w-full bg-[radial-gradient(#3d5b9d_1px,transparent_0px)] [background-size:16px_16px]"></div>
       }
-      <Navbar />
-      <Introduction />
+      <div className='darkBackground curve shadow'>
+        <Navbar />
+        <Introduction />
       <About />
+      </div>
       <TechStack />
       <WorkExperience />
       <Certifications />

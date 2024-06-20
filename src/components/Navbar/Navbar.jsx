@@ -60,9 +60,6 @@ export default function Navbar() {
                                 <a href="#" class="block py-2 pr-4 pl-3   hover:bg-gray-50 dark:hover:bg-gray-800 ">Certifications</a>
                             </MenuItem>
 
-                            <MenuItem>
-                                <a href="#" class="block py-2 pr-4 pl-3   hover:bg-gray-50 dark:hover:bg-gray-800 ">Badges</a>
-                            </MenuItem>
 
                             <MenuItem>
                                 <a href="#" class="block py-2 pr-4 pl-3   hover:bg-gray-50 dark:hover:bg-gray-800 ">Contact</a>

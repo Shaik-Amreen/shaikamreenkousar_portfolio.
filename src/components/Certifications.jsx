@@ -30,7 +30,7 @@ function Certifications() {
         <div className=' text-left mx-5 md:mx-20 '>
             <motion.div variants={textVariants} initial="hidden"
                 whileInView="show" className="mt-14 md:mt-24">
-                <h2 className={`${styles.sectionHeadText} text-left`}>
+                <h2 className={`${styles.sectionHeadText} text-center`}>
                     Certifications                </h2>
 
 
