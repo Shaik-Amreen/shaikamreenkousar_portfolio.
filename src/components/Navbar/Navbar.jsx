@@ -23,11 +23,11 @@ export default function Navbar() {
                 <nav className='flex'>
                     <a className="pl-4"><i className='bx bxl-instagram-alt text-xl'></i></a>
                     <a className="pl-4"><i className='bx bxl-linkedin-square text-xl' ></i></a>
-                    <button className='pl-4'>
+                    {/* <button className='pl-4'>
                         {theme === 'dark' ?
                             <i onClick={toggleTheme} className='bx bx-sun bx-tada text-xl' ></i> :
                             <i onClick={toggleTheme} className='bx bxs-moon bx-tada text-xl' ></i>}
-                    </button>
+                    </button> */}
 
 
                     <Menu >
