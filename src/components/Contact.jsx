@@ -14,7 +14,7 @@ const Contact = () => {
 
     const [emailStatus, setEmailStatus] = useState('Send')
 
-    
+
     const [loading, setLoading] = useState(false);
 
     const handleChange = (e) => {
@@ -71,8 +71,8 @@ const Contact = () => {
         <div
             className={`mx-5 md:mx-20 text-center mt-10 `}
         >
-                <p className={styles.sectionSubText}>Get in touch</p>
-                <h3 className={styles.sectionHeadText}>Contact.</h3>
+            <p className={styles.sectionSubText}>Get in touch</p>
+            <h3 className={styles.sectionHeadText}>Contact.</h3>
 
             <motion.div
                 variants={zoomIn()}

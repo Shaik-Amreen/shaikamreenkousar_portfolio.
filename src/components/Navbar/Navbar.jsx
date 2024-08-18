@@ -10,6 +10,12 @@ export default function Navbar() {
 
     const { theme, toggleTheme } = useTheme()
     const colors = Colors[theme]
+    const scrollToSection = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
     return (
         <motion.div >
             <header style={{ height: "70px" }} className='sticky top-0 px-3  flex flex-wrap items-center justify-between sm:px-0 md:px-20 '>
@@ -20,9 +26,9 @@ export default function Navbar() {
                     <div ><span class="hidden sm:block ml-2 text-md lg:text-lg ">Shaik Amreen Kousar</span>
                     </div>
                 </div>
-                <nav className='flex'>
-                    <a className="pl-4"><i className='bx bxl-instagram-alt text-xl'></i></a>
-                    <a className="pl-4"><i className='bx bxl-linkedin-square text-xl' ></i></a>
+                <nav className='flex ' style={{ position: "fixed", flex: 1, right: "30px" }}>
+                    {/* <a className="pl-4" target='_blank'><i className='bx bxl-instagram-alt text-xl'></i></a> */}
+                    <a className='pl-4' href='https://www.linkedin.com/in/shaik-amreen-kousar/' target='_blank'><i className='bx bxl-linkedin-square text-xl' ></i></a>
                     {/* <button className='pl-4'>
                         {theme === 'dark' ?
                             <i onClick={toggleTheme} className='bx bx-sun bx-tada text-xl' ></i> :
@@ -30,44 +36,47 @@ export default function Navbar() {
                     </button> */}
 
 
-                    <Menu >
-                        <MenuButton>
-                            <a className="pl-4"><i className='bx bx-menu text-xl' ></i></a>
-                        </MenuButton>
-                        <MenuItems anchor="bottom" className=' bg-white dark:border-gray-800 dark:bg-gray-900 border rounded shadow text-gray-900 dark:text-gray-100' style={{ backgroundColor: "red" }}>
-
-                            <MenuItem >
-                                <a href="#" class="block py-2 pr-4 pl-3  hover:bg-gray-50 dark:hover:bg-gray-800 ">About</a>
-                            </MenuItem>
-
-                            <MenuItem >
-                                <a href="#" class="block py-2 pr-4 pl-3  hover:bg-gray-50 dark:hover:bg-gray-800 ">Tech Stack</a>
-                            </MenuItem>
-
-                            <MenuItem>
-                                <a href="#" class="block py-2 pr-4 pl-3  hover:bg-gray-50 dark:hover:bg-gray-800 ">Work Experience</a>
-                            </MenuItem>
-
-                            <MenuItem >
-                                <a href="#" class="block py-2 pr-4 pl-3  hover:bg-gray-50 dark:hover:bg-gray-800 ">Services</a>
-                            </MenuItem>
-
-                            <MenuItem>
-                                <a href="#" class="block py-2 pr-4 pl-3   hover:bg-gray-50 dark:hover:bg-gray-800 ">Projects</a>
-                            </MenuItem>
-
-                            <MenuItem>
-                                <a href="#" class="block py-2 pr-4 pl-3   hover:bg-gray-50 dark:hover:bg-gray-800 ">Certifications</a>
-                            </MenuItem>
+                    <div >
+                        <Menu >
+                            <MenuButton>
+                                <a style={{ marginTop: "-12px" }} className="pl-4"><i className='bx bx-menu text-xl' ></i></a>
+                            </MenuButton>
+                            <MenuItems anchor="bottom" className=' bg-white dark:border-gray-800 dark:bg-gray-900 border rounded shadow text-gray-900 dark:text-gray-100' style={{ backgroundColor: "red" }}>
 
 
-                            <MenuItem>
-                                <a href="#" class="block py-2 pr-4 pl-3   hover:bg-gray-50 dark:hover:bg-gray-800 ">Contact</a>
-                            </MenuItem>
+                                <MenuItem >
+                                    <div style={{ cursor: "pointer" }} onClick={() => { scrollToSection('introduction') }} class="block py-2 pr-4 pl-3  hover:bg-gray-50 dark:hover:bg-gray-800 ">Introduction</div>
+                                </MenuItem>
 
-                        </MenuItems>
-                    </Menu>
+                                <MenuItem >
+                                    <div style={{ cursor: "pointer" }} onClick={() => { scrollToSection('about') }} class="block py-2 pr-4 pl-3  hover:bg-gray-50 dark:hover:bg-gray-800 ">About</div>
+                                </MenuItem>
 
+                                <MenuItem >
+                                    <div style={{ cursor: "pointer" }} onClick={() => { scrollToSection('techstack') }} class="block py-2 pr-4 pl-3  hover:bg-gray-50 dark:hover:bg-gray-800 ">Tech Stack</div>
+                                </MenuItem>
+
+                                <MenuItem>
+                                    <div style={{ cursor: "pointer" }} onClick={() => { scrollToSection('workexperience') }} class="block py-2 pr-4 pl-3  hover:bg-gray-50 dark:hover:bg-gray-800 ">Work Experience</div>
+                                </MenuItem>
+
+                                <MenuItem >
+                                    <div style={{ cursor: "pointer" }} onClick={() => { scrollToSection('certifications') }} class="block py-2 pr-4 pl-3  hover:bg-gray-50 dark:hover:bg-gray-800 ">Certifications</div>
+                                </MenuItem>
+
+                                <MenuItem>
+                                    <div style={{ cursor: "pointer" }} onClick={() => { scrollToSection('projects') }} class="block py-2 pr-4 pl-3   hover:bg-gray-50 dark:hover:bg-gray-800 ">Projects</div>
+                                </MenuItem>
+
+                                <MenuItem>
+                                    <div style={{ cursor: "pointer" }} onClick={() => { scrollToSection('contact') }} class="block py-2 pr-4 pl-3   hover:bg-gray-50 dark:hover:bg-gray-800 ">Contact</div>
+                                </MenuItem>
+
+
+
+                            </MenuItems>
+                        </Menu>
+                    </div>
 
                 </nav>
             </header>

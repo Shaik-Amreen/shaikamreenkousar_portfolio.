@@ -6,8 +6,12 @@ import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
-
-import javascript_cert from "./certifications/javascript_cert.png";
+import SQLB from './certifications/SQLB.png';
+import SQLI from './certifications/SQLI.png';
+import js from './certifications/js.png';
+import JSI from './certifications/JSI.png';
+import problemsolving from './certifications/problemsolving.png';
+import pythoncert from './certifications/pythoncert.png';
 
 
 
@@ -83,7 +87,12 @@ export {
   github,
   menu,
 
-  javascript_cert,
+  SQLB,
+  SQLI,
+  js,
+  JSI,
+  problemsolving,
+  pythoncert,
 
   python,
   java,

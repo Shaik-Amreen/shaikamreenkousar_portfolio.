@@ -4,7 +4,12 @@ import {
     creator,
     web,
 
-    javascript_cert,
+    SQLB,
+    SQLI,
+    js,
+    JSI,
+    problemsolving,
+    pythoncert,
 
     es6,
     javascript,
@@ -282,12 +287,12 @@ const experiences = [
 
 
 const certifications = [
-    { name: 'Javascript', link: "https://www.hackerrank.com/certificates/ab632039636e", image: javascript_cert },
-    { name: 'Javascript (Intermediate)', link: "https://www.hackerrank.com/certificates/20eb356e5db2", image: javascript_cert },
-    { name: 'Problem solving', link: "https://www.hackerrank.com/certificates/fa9ea78d6e05", image: javascript_cert },
-    { name: 'Python', link: "https://www.hackerrank.com/certificates/17795979b091", image: javascript_cert },
-    { name: 'SQL-Basic', link: "https://www.hackerrank.com/certificates/3455fe4f7f6f", image: javascript_cert },
-    { name: 'SQL-Intermediate', link: "https://www.hackerrank.com/certificates/6b69f49697dd", image: javascript_cert },
+    { name: 'Javascript', link: "https://www.hackerrank.com/certificates/ab632039636e", image: js },
+    { name: 'Javascript (Intermediate)', link: "https://www.hackerrank.com/certificates/20eb356e5db2", image: JSI },
+    { name: 'Problem solving', link: "https://www.hackerrank.com/certificates/fa9ea78d6e05", image: problemsolving },
+    { name: 'Python', link: "https://www.hackerrank.com/certificates/17795979b091", image: pythoncert },
+    { name: 'SQL-Basic', link: "https://www.hackerrank.com/certificates/3455fe4f7f6f", image: SQLB },
+    { name: 'SQL-Intermediate', link: "https://www.hackerrank.com/certificates/6b69f49697dd", image: SQLI },
 ]
 
 const testimonials = [
@@ -319,68 +324,490 @@ const testimonials = [
 
 const projects = [
     {
-        name: "Car Rent",
-        description:
-            "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-        tags: [
+        "name": "Benchmark Automation - AMD ",
+        "description": "Automates the process of running, managing, and analyzing performance benchmarks for hardware components, providing faster and more accurate benchmarking results for AMD products.",
+        "tags": [
             {
-                name: "react",
-                color: "blue-text-gradient",
+                "name": "Vue.js",
+                "color": "blue-text-gradient"
             },
             {
-                name: "mongodb",
-                color: "green-text-gradient",
+                "name": "Node.js",
+                "color": "green-text-gradient"
             },
             {
-                name: "tailwind",
-                color: "pink-text-gradient",
+                "name": "MongoDB",
+                "color": "pink-text-gradient"
             },
+            {
+                "name": "Express.js",
+                "color": "yellow-text-gradient"
+            },
+            {
+                "name": "AWS",
+                "color": "orange-text-gradient"
+            },
+            {
+                "name": "GitHub",
+                "color": "purple-text-gradient"
+            },
+            {
+                "name": "Visual Studio",
+                "color": "red-text-gradient"
+            },
+            {
+                "name": "Swagger",
+                "color": "teal-text-gradient"
+            },
+            {
+                "name": "Postman",
+                "color": "cyan-text-gradient"
+            }
         ],
-        image: carrent,
-        source_code_link: "https://github.com/",
+        "role": "Full stack Developer"
     },
     {
-        name: "Job IT",
-        description:
-            "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-        tags: [
+        "name": "GSI Sales Advisory - AMD",
+        "description": "Supports global system integrators by offering data-driven insights and recommendations to optimize sales strategies and enhance performance outcomes.",
+        "tags": [
             {
-                name: "react",
-                color: "blue-text-gradient",
+                "name": "React.js",
+                "color": "blue-text-gradient"
             },
             {
-                name: "restapi",
-                color: "green-text-gradient",
+                "name": "Node.js",
+                "color": "green-text-gradient"
             },
             {
-                name: "scss",
-                color: "pink-text-gradient",
+                "name": "MongoDB",
+                "color": "pink-text-gradient"
             },
+            {
+                "name": "Python",
+                "color": "yellow-text-gradient"
+            },
+            {
+                "name": "AWS",
+                "color": "orange-text-gradient"
+            },
+            {
+                "name": "GitHub",
+                "color": "purple-text-gradient"
+            },
+            {
+                "name": "Visual Studio",
+                "color": "red-text-gradient"
+            },
+            {
+                "name": "Swagger",
+                "color": "teal-text-gradient"
+            },
+            {
+                "name": "Postman",
+                "color": "cyan-text-gradient"
+            }
         ],
-        image: jobit,
-        source_code_link: "https://github.com/",
+        "role": "Full stack Developer"
     },
     {
-        name: "Trip Guide",
-        description:
-            "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-        tags: [
+        "name": "NextZEN ERP HRMS",
+        "description": "A unified solution integrating HRMS, Accounting, and Warehouse Management functionalities.",
+        "tags": [
             {
-                name: "nextjs",
-                color: "blue-text-gradient",
+                "name": "React-Native",
+                "color": "blue-text-gradient"
             },
             {
-                name: "supabase",
-                color: "green-text-gradient",
+                "name": "Android Studio",
+                "color": "green-text-gradient"
             },
             {
-                name: "css",
-                color: "pink-text-gradient",
+                "name": "Xcode",
+                "color": "pink-text-gradient"
             },
+            {
+                "name": "GitHub",
+                "color": "purple-text-gradient"
+            },
+            {
+                "name": "Visual Studio",
+                "color": "red-text-gradient"
+            }
         ],
-        image: tripguide,
-        source_code_link: "https://github.com/",
+        "role": "React Native Developer"
     },
-];
+    {
+        "name": "Upturn",
+        "description": "A stock advisor app utilizing adaptive AI for personalized Buy and Sell recommendations, with features like custom Robo-Portfolios and financial guidance based on AI technologies.",
+        "tags": [
+            {
+                "name": "React-Native",
+                "color": "blue-text-gradient"
+            },
+            {
+                "name": "Android Studio",
+                "color": "green-text-gradient"
+            },
+            {
+                "name": "Xcode",
+                "color": "pink-text-gradient"
+            },
+            {
+                "name": "Firebase",
+                "color": "orange-text-gradient"
+            },
+            {
+                "name": "GitHub",
+                "color": "purple-text-gradient"
+            },
+            {
+                "name": "Visual Studio",
+                "color": "red-text-gradient"
+            }
+        ],
+        "role": "React Native Developer - Lead "
+    },
+    {
+        "name": "Nova Physician Wellness Center",
+        "description": "Enables users to monitor diet plans and exercise routines, offering expert advice from dieticians and fostering connections with fitness enthusiasts.",
+        "tags": [
+            {
+                "name": "React-Native",
+                "color": "blue-text-gradient"
+            },
+            {
+                "name": "Figma",
+                "color": "green-text-gradient"
+            },
+            {
+                "name": "Android Studio",
+                "color": "pink-text-gradient"
+            },
+            {
+                "name": "Xcode",
+                "color": "yellow-text-gradient"
+            },
+            {
+                "name": "Firebase",
+                "color": "orange-text-gradient"
+            },
+            {
+                "name": "GitHub",
+                "color": "purple-text-gradient"
+            },
+            {
+                "name": "Visual Studio",
+                "color": "red-text-gradient"
+            }
+        ],
+        "role": "Full Stack Developer – Lead"
+
+    },
+    {
+        "name": "Buzz Staff Women",
+        "description": "An NGO fostering community and growth among women, focusing on empowerment and extending reach to rural areas for training.",
+        "tags": [
+            {
+                "name": "React.js",
+                "color": "blue-text-gradient"
+            },
+            {
+                "name": "Redux",
+                "color": "green-text-gradient"
+            },
+            {
+                "name": "Material UI",
+                "color": "pink-text-gradient"
+            },
+            {
+                "name": "GitHub",
+                "color": "purple-text-gradient"
+            },
+            {
+                "name": "Jira",
+                "color": "red-text-gradient"
+            },
+            {
+                "name": "Visual Studio",
+                "color": "yellow-text-gradient"
+            }
+        ],
+        "role": "Frontend Developer"
+    },
+    {
+        "name": "ARIKYA – WEB | ANDROID | IOS",
+        "description": "Arikya is the platform which discovers the path to Skill Enhancement, Automated Recruitment and Remarkable achievement.",
+        "tags": [
+            { "name": "Angular", "color": "blue-text-gradient" },
+            { "name": "React Native", "color": "green-text-gradient" },
+            { "name": "Bootstrap", "color": "pink-text-gradient" },
+            { "name": "Node.js", "color": "yellow-text-gradient" },
+            { "name": "Express", "color": "orange-text-gradient" },
+            { "name": "Swagger", "color": "red-text-gradient" },
+            { "name": "MongoDB", "color": "green-text-gradient" },
+            { "name": "Insomnia", "color": "purple-text-gradient" },
+            { "name": "AWS", "color": "cyan-text-gradient" },
+            { "name": "GITOPS", "color": "brown-text-gradient" }
+        ],
+        "role": "Full Stack Developer"
+
+    },
+    {
+        "name": "Diny Bee",
+        "description": "Diny Bee is a Warehouse Management Tool designed to streamline warehouse operations.",
+        "tags": [
+            { "name": "Angular", "color": "blue-text-gradient" },
+            { "name": "Bootstrap", "color": "green-text-gradient" },
+            { "name": "Material-UI", "color": "pink-text-gradient" },
+            { "name": "Slack", "color": "orange-text-gradient" },
+            { "name": "GitHub", "color": "purple-text-gradient" },
+            { "name": "Visual Studio", "color": "cyan-text-gradient" }
+        ],
+        "role": "Frontend Developer"
+    },
+    {
+        "name": "Dynamic Ecommerce App",
+        "description": "A cross-platform app designed with a dynamic UI for an ecommerce experience.",
+        "tags": [
+            { "name": "React-Native CLI", "color": "blue-text-gradient" },
+            { "name": "Figma", "color": "green-text-gradient" },
+            { "name": "Android Studio", "color": "pink-text-gradient" },
+            { "name": "Xcode", "color": "orange-text-gradient" },
+            { "name": "GitHub", "color": "purple-text-gradient" },
+            { "name": "Visual Studio", "color": "cyan-text-gradient" }
+        ],
+        "role": "React Native Developer - Lead "
+    },
+    {
+        "name": "ERP",
+        "description": "Product to digitalize manual processes in college activities.",
+        "tags": [
+            { "name": "React.js", "color": "blue-text-gradient" },
+            { "name": "React Hooks", "color": "green-text-gradient" },
+            { "name": "Bootstrap", "color": "pink-text-gradient" },
+            { "name": "Redux", "color": "orange-text-gradient" },
+            { "name": "Node.js", "color": "yellow-text-gradient" },
+            { "name": "MongoDB", "color": "green-text-gradient" },
+            { "name": "GitHub", "color": "purple-text-gradient" },
+            { "name": "Visual Studio", "color": "cyan-text-gradient" }
+        ],
+        "role": "Full Stack Developer – Lead"
+
+    },
+    {
+        "name": "College Feedback and Task Management System",
+        "description": "Enables faculty and students to exchange feedback seamlessly. Admins can view and download reports while faculty upload tasks.",
+        "tags": [
+            { "name": "Angular", "color": "blue-text-gradient" },
+            { "name": "Bootstrap", "color": "green-text-gradient" },
+            { "name": "Node.js", "color": "yellow-text-gradient" },
+            { "name": "Express", "color": "orange-text-gradient" },
+            { "name": "Swagger", "color": "red-text-gradient" },
+            { "name": "MongoDB", "color": "green-text-gradient" },
+            { "name": "AWS", "color": "cyan-text-gradient" },
+            { "name": "GitOps", "color": "purple-text-gradient" },
+            { "name": "GitHub", "color": "brown-text-gradient" }
+        ],
+        "role": "Full stack Developer"
+    },
+    {
+        "name": "AI Based Slum Control | SMART INDIA HACKATHON (SIH)",
+        "description": "Web app with advanced AI for slum identification via image segmentation, coupled with automated employment solutions.",
+        "tags": [
+            { "name": "Angular", "color": "blue-text-gradient" },
+            { "name": "Bootstrap", "color": "green-text-gradient" },
+            { "name": "Node.js", "color": "yellow-text-gradient" },
+            { "name": "Express", "color": "orange-text-gradient" },
+            { "name": "Swagger", "color": "red-text-gradient" },
+            { "name": "MongoDB", "color": "green-text-gradient" },
+            { "name": "GitHub", "color": "purple-text-gradient" }
+        ],
+        "role": "React Native Developer - Lead "
+    },
+    {
+        "name": "Online Exam Fee Payment",
+        "description": "Web app for online exam fee payment with separate logins for Students and Admin. Integrated a payment gateway for secure transactions.",
+        "tags": [
+            { "name": "Angular", "color": "blue-text-gradient" },
+            { "name": "Bootstrap", "color": "green-text-gradient" },
+            { "name": "Node.js", "color": "yellow-text-gradient" },
+            { "name": "Express", "color": "orange-text-gradient" },
+            { "name": "Swagger", "color": "red-text-gradient" },
+            { "name": "MongoDB", "color": "green-text-gradient" },
+            { "name": "GitHub", "color": "purple-text-gradient" }
+        ],
+        "role": "Full Stack Developer – Lead"
+
+    },
+    {
+        "name": "Digital Library",
+        "description": "A web application offering students technical and verbal skill enhancement through quizzes, study materials, and course rankings.",
+        "tags": [
+            { "name": "Angular", "color": "blue-text-gradient" },
+            { "name": "Bootstrap", "color": "green-text-gradient" },
+            { "name": "Node.js", "color": "yellow-text-gradient" },
+            { "name": "Express", "color": "orange-text-gradient" },
+            { "name": "Swagger", "color": "red-text-gradient" },
+            { "name": "MongoDB", "color": "green-text-gradient" },
+            { "name": "GitHub", "color": "purple-text-gradient" }
+        ],
+        "role": "Full Stack Developer – Lead"
+    },
+    {
+        "name": "Digital Admission Process",
+        "description": "A web application facilitating the admissions process for the institute, enabling students to apply and manage applications efficiently.",
+        "tags": [
+            { "name": "Angular", "color": "blue-text-gradient" },
+            { "name": "Bootstrap", "color": "green-text-gradient" },
+            { "name": "Node.js", "color": "yellow-text-gradient" },
+            { "name": "Express", "color": "orange-text-gradient" },
+            { "name": "Swagger", "color": "red-text-gradient" },
+            { "name": "MongoDB", "color": "green-text-gradient" },
+            { "name": "GitHub", "color": "purple-text-gradient" }
+        ],
+        "role": "Full Stack Developer – Lead"
+    },
+    {
+        "name": "Recruitment Process for Internships or Any Events",
+        "description": "A web app where candidates submit applications for internships or events, with feedback and interview evaluations.",
+        "tags": [
+            { "name": "React.js", "color": "blue-text-gradient" },
+            { "name": "React Hooks", "color": "green-text-gradient" },
+            { "name": "Bootstrap", "color": "pink-text-gradient" },
+            { "name": "Redux", "color": "orange-text-gradient" },
+            { "name": "Node.js", "color": "yellow-text-gradient" },
+            { "name": "MongoDB", "color": "green-text-gradient" },
+            { "name": "GitHub", "color": "purple-text-gradient" }
+        ],
+        "role": "Full Stack Developer – Lead"
+    },
+    {
+        "name": "Agri-Farm | SMART INDIA HACKATHON (SIH)",
+        "description": "React Native mobile app for Agriculture Food processing, providing farmers with crop updates and customer interaction.",
+        "tags": [
+            { "name": "React Native", "color": "blue-text-gradient" },
+            { "name": "Bootstrap", "color": "green-text-gradient" },
+            { "name": "Node.js", "color": "yellow-text-gradient" },
+            { "name": "Express", "color": "orange-text-gradient" },
+            { "name": "Swagger", "color": "red-text-gradient" },
+            { "name": "MongoDB", "color": "green-text-gradient" },
+            { "name": "GitHub", "color": "purple-text-gradient" }
+        ],
+        "role": "Full stack Developer"
+    },
+    {
+        "name": "Event Accounting Management",
+        "description": "Centralized fund management system for events, tracking all transactions and histories specific to each event.",
+        "tags": [
+            { "name": "Angular", "color": "blue-text-gradient" },
+            { "name": "Bootstrap", "color": "green-text-gradient" },
+            { "name": "Node.js", "color": "yellow-text-gradient" },
+            { "name": "Express", "color": "orange-text-gradient" },
+            { "name": "Swagger", "color": "red-text-gradient" },
+            { "name": "MongoDB", "color": "green-text-gradient" },
+            { "name": "GitHub", "color": "purple-text-gradient" }
+        ],
+        "role": "Full stack Developer - Lead"
+    },
+    {
+        "name": "Automation of Exam Hall and Seating Arrangement",
+        "description": "An online process-based web application simplifying seat allocation during examinations for colleges and students. Developed with distinct logins for admin and students, allowing tasks like hall number management and exam timetable uploads. Automates seating arrangements and distributes hall numbers via email. Admins can print seating arrangements.",
+        "tags": [
+            { "name": "React.js", "color": "blue-text-gradient" },
+            { "name": "React Hooks", "color": "green-text-gradient" },
+            { "name": "Bootstrap", "color": "pink-text-gradient" },
+            { "name": "Redux", "color": "yellow-text-gradient" },
+            { "name": "Node.js", "color": "orange-text-gradient" },
+            { "name": "MongoDB", "color": "green-text-gradient" },
+            { "name": "GitHub", "color": "purple-text-gradient" },
+            { "name": "Visual Studio", "color": "cyan-text-gradient" }
+        ],
+        "role": "React Native Developer - Lead "
+    },
+    {
+        "name": "Automation Plugin of Attendance Marking in MS Teams",
+        "description": "Developed an Automation Plugin for MS Teams, streamlining virtual classes by automating attendance tracking. Designed and developed UI, backend, and API integration for real-time data synchronization, enhancing convenience and productivity.",
+        "tags": [
+            { "name": "React.js", "color": "blue-text-gradient" },
+            { "name": "React Hooks", "color": "green-text-gradient" },
+            { "name": "Bootstrap", "color": "pink-text-gradient" },
+            { "name": "Node.js", "color": "orange-text-gradient" },
+            { "name": "MongoDB", "color": "green-text-gradient" },
+            { "name": "GitHub", "color": "purple-text-gradient" }
+        ],
+        "role": "Full Stack Developer – Lead"
+    },
+    {
+        "name": "Task Forz",
+        "description": "A responsive web app enhancing project tracking for individual tenants with graphical reports. Available in fifty languages, including Arabic, it allows tenants to add projects and teams while tracking status and documentation.",
+        "tags": [
+            { "name": "Node.js", "color": "orange-text-gradient" },
+            { "name": "MongoDB", "color": "green-text-gradient" },
+            { "name": "GitHub", "color": "purple-text-gradient" },
+            { "name": "Visual Studio", "color": "cyan-text-gradient" }
+        ],
+        "role": "Backend Developer"
+    },
+    {
+        "name": "Employee Leave and Salary Management System",
+        "description": "A system managing employee leave requests and automating salary generation. Employees apply for leave, which is processed for salary generation, with email notifications sent upon salary crediting.",
+        "tags": [
+            { "name": "React.js", "color": "blue-text-gradient" },
+            { "name": "React Hooks", "color": "green-text-gradient" },
+            { "name": "Bootstrap", "color": "pink-text-gradient" },
+            { "name": "Redux", "color": "yellow-text-gradient" },
+            { "name": "Node.js", "color": "orange-text-gradient" },
+            { "name": "MongoDB", "color": "green-text-gradient" },
+            { "name": "GitHub", "color": "purple-text-gradient" },
+            { "name": "Visual Studio", "color": "cyan-text-gradient" }
+        ],
+        "role": "Full Stack Developer – Lead"
+    },
+    {
+        "name": "Automated Time Table Generation",
+        "description": "A system simplifying schedule creation for educational institutions by automating timetable generation. Designed algorithms and interfaces, integrating data sources for optimal scheduling with minimal conflicts.",
+        "tags": [
+            { "name": "React.js", "color": "blue-text-gradient" },
+            { "name": "React Hooks", "color": "green-text-gradient" },
+            { "name": "Bootstrap", "color": "pink-text-gradient" },
+            { "name": "Node.js", "color": "orange-text-gradient" },
+            { "name": "Express.js", "color": "yellow-text-gradient" },
+            { "name": "MongoDB", "color": "green-text-gradient" },
+            { "name": "GitHub", "color": "purple-text-gradient" }
+        ],
+        "role": "Full Stack Developer – Lead"
+    },
+    {
+        "name": "Examination Report Generation",
+        "description": "A web application for generating university semester examination reports. Admins upload subject information, while faculty input student marks, assessments, and syllabus details via Excel. Students provide feedback for internal evaluation.",
+        "tags": [
+            { "name": "React.js", "color": "blue-text-gradient" },
+            { "name": "React Hooks", "color": "green-text-gradient" },
+            { "name": "Bootstrap", "color": "pink-text-gradient" },
+            { "name": "Node.js", "color": "orange-text-gradient" },
+            { "name": "Express.js", "color": "yellow-text-gradient" },
+            { "name": "MongoDB", "color": "green-text-gradient" },
+            { "name": "GitHub", "color": "purple-text-gradient" }
+        ],
+        "role": "Full Stack Developer – Lead"
+    },
+    {
+        "name": "BGMI Tournaments",
+        "description": "A webpage developed to conduct online tournaments for any kind of events or occasions. A responsive webpage was designed for tournament registrations, with BGMI as a reference example.",
+        "tags": [
+            { "name": "React.js", "color": "blue-text-gradient" },
+            { "name": "React Hooks", "color": "green-text-gradient" },
+            { "name": "Bootstrap", "color": "pink-text-gradient" },
+            { "name": "Node.js", "color": "orange-text-gradient" },
+            { "name": "Express.js", "color": "yellow-text-gradient" },
+            { "name": "MongoDB", "color": "green-text-gradient" },
+            { "name": "GitHub", "color": "purple-text-gradient" }
+        ],
+        "role": "Full Stack Developer"
+    }
+]
+
+
+
 
 export { services, technologies, experiences, certifications, testimonials, projects };

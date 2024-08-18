@@ -49,6 +49,13 @@ const buttonVariants = {
 };
 
 const Introduction = () => {
+    const scrollToSection = (id) => {
+       
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
     return (
         <div className="introBody" style={{ padding: "0rem"}}>
             <div className="md:px-20 lg:px-24  text-center  md:text-left  flex flex-wrap justify-evenly md:items-center introPart" style={{ paddingTop: '0rem' }} >
@@ -76,8 +83,9 @@ const Introduction = () => {
                                 whileHover="hover"
                                 whileTap="tap"
                                 className="p-2 px-6 rounded-full custom-gradient-border flex items-center"
+                                style={{ cursor: "pointer" }} onClick={() => { scrollToSection('contact') }}
                             >
-                                <motion.h2>Reach out &nbsp;</motion.h2>
+                                <motion.h2   >Reach out &nbsp;</motion.h2>
                                 <i class='bx bxs-chevron-down-circle '></i>
                             </motion.button>
 
