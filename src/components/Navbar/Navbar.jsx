@@ -28,7 +28,7 @@ export default function Navbar() {
                 </div>
                 <nav className='flex ' style={{ position: "fixed", flex: 1, right: "30px" }}>
                     {/* <a className="pl-4" target='_blank'><i className='bx bxl-instagram-alt text-xl'></i></a> */}
-                    <a className='pl-4' href='https://www.linkedin.com/in/shaik-amreen-kousar/' target='_blank'><i className='bx bxl-linkedin-square text-xl' ></i></a>
+                    <a className='pl-4' href='https://www.linkedin.com/in/shaikamreenkousar/' target='_blank'><i className='bx bxl-linkedin-square text-xl' ></i></a>
                     {/* <button className='pl-4'>
                         {theme === 'dark' ?
                             <i onClick={toggleTheme} className='bx bx-sun bx-tada text-xl' ></i> :
