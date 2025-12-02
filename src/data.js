@@ -196,7 +196,7 @@ const experiences = [
         company_name: "Infobell it | AMD",
         icon: infobell,
         iconBg: "linear-gradient( rgba(61, 91, 157, 1), rgba(17, 24, 39, 1))",
-        date: "March 2024 – present",
+        date: "March 2024 – December 2025",
         points: [
             "Developing and maintaining web applications using React.js and other related technologies.",
             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
