@@ -66,6 +66,9 @@ import nestjs from "./tech/backend/nestjs.png";
 import expo from './tech/mobiledevelopment/expo.png'
 import reactnative from './tech/mobiledevelopment/reactnative.png'
 
+import wordpress from './tech/cms/wordpress.svg';
+import elementor from './tech/cms/elementor.svg';
+
 import infobell from "./company/infobell.png";
 import earthetic from "./company/earthetic.png";
 import yesreal from "./company/yesreal.png";
@@ -123,6 +126,8 @@ export {
   tailwind,
   reactbootstrap,
 
+  wordpress,
+  elementor,
 
   githubDesktop,
   gitlab,

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Elementor-style circular icon: pink circle + dark \"E\" -->
+  <circle cx="16" cy="16" r="16" fill="#FF7BE5" />
+  <g fill="#92003B">
+    <!-- Vertical bar -->
+    <rect x="10" y="9" width="3" height="14" rx="0.8" />
+    <!-- Three horizontal bars -->
+    <rect x="15" y="9" width="7" height="2.5" rx="1.25" />
+    <rect x="15" y="14" width="7" height="2.5" rx="1.25" />
+    <rect x="15" y="19" width="7" height="2.5" rx="1.25" />
+  </g>
+</svg>

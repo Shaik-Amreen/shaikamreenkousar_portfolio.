@@ -55,6 +55,8 @@ import {
     mui,
     tailwind,
     reactbootstrap,
+    wordpress,
+    elementor,
 
     infobell,
     earthetic,
@@ -147,6 +149,13 @@ const technologies = [
             { name: "Headless UI", icon: headlessui },
             { name: "React-BootStrap", icon: reactbootstrap },
 
+        ]
+    },
+    {
+        category: "CMS",
+        list: [
+            { name: "WordPress", icon: wordpress },
+            { name: "Elementor", icon: elementor },
         ]
     },
     {
@@ -324,6 +333,108 @@ const testimonials = [
 
 const projects = [
     {
+        "name": "ASI ADP Job Alerts – Real-time CSULB Hiring Updates",
+        "description": "Developed real-time job alert system for CSULB students monitoring ASI & Beach Shop positions. Implemented automated web scraping from ADP job postings. Built React frontend with responsive design for subscription and job browsing. Integrated Node.js backend with MongoDB for job data and user subscriptions. Automated email notifications and daily summary digest for subscribed students.",
+        "tags": [
+            { "name": "React", "color": "blue-text-gradient" },
+            { "name": "Tailwind CSS", "color": "green-text-gradient" },
+            { "name": "Node.js", "color": "pink-text-gradient" },
+            { "name": "MongoDB", "color": "yellow-text-gradient" },
+            { "name": "GitHub Actions", "color": "orange-text-gradient" },
+            { "name": "Vercel", "color": "purple-text-gradient" }
+        ],
+        "role": "Full Stack Developer",
+        "link": "https://adp-scraper-vercel.vercel.app/",
+        "source_code_link": ""
+    },
+    {
+        "name": "KS Bakery – WordPress Business Website",
+        "description": "Designed and developed a fully responsive bakery business website using WordPress and Elementor page builder. Implemented WCAG 2.1 (Levels A, AA) accessibility standards including semantic HTML5, ARIA landmarks, keyboard navigation, and adequate color contrast ratios. Built custom page layouts with Elementor widgets, ensuring mobile-first responsive design.",
+        "tags": [
+            { "name": "WordPress", "color": "blue-text-gradient" },
+            { "name": "Elementor", "color": "green-text-gradient" },
+            { "name": "WCAG 2.1", "color": "pink-text-gradient" },
+            { "name": "SEO", "color": "yellow-text-gradient" }
+        ],
+        "role": "Web Developer",
+        "link": "https://ksbakery.infinityfreeapp.com/?i=1",
+        "source_code_link": ""
+    },
+    {
+        "name": "Origem India – Lab Diamond E-Commerce",
+        "description": "Developed high-performance web application using Next.js with server-side rendering. Built dynamic product catalog with 360° views, advanced filtering, shopping cart, real-time inventory. Implemented WCAG AA accessibility standards and comprehensive SEO strategies. Integrated payment gateways (Stripe, Razorpay) with JWT authentication on AWS EC2 and S3.",
+        "tags": [
+            { "name": "Next.js", "color": "blue-text-gradient" },
+            { "name": "Tailwind CSS", "color": "green-text-gradient" },
+            { "name": "Node.js", "color": "pink-text-gradient" },
+            { "name": "MongoDB", "color": "yellow-text-gradient" },
+            { "name": "AWS", "color": "orange-text-gradient" },
+            { "name": "Cloudflare", "color": "purple-text-gradient" }
+        ],
+        "role": "Full Stack Developer",
+        "link": "https://origemindia.com/",
+        "source_code_link": ""
+    },
+    {
+        "name": "NativeNest – E-Commerce Platform | Android & iOS App",
+        "description": "Developed responsive web application and cross-platform mobile apps serving 30K+ concurrent users. Implemented Redis caching reducing database load by 60%, achieving sub-100ms API response times. Deployed on AWS EC2 with Docker containers and CI/CD pipelines achieving 99.9% uptime. Optimized performance through code splitting, lazy loading, achieving Lighthouse score 94/100.",
+        "tags": [
+            { "name": "React.js", "color": "blue-text-gradient" },
+            { "name": "React Native", "color": "green-text-gradient" },
+            { "name": "Node.js", "color": "pink-text-gradient" },
+            { "name": "PostgreSQL", "color": "yellow-text-gradient" },
+            { "name": "Redis", "color": "orange-text-gradient" },
+            { "name": "AWS", "color": "purple-text-gradient" },
+            { "name": "Docker", "color": "teal-text-gradient" }
+        ],
+        "role": "Full Stack Developer",
+        "link": "https://nativenest.in/",
+        "source_code_link": ""
+    },
+    {
+        "name": "B4IGO – Digital Legacy & Asset Management",
+        "description": "Developed responsive web application and cross-platform mobile apps for digital asset management. Implemented WCAG AA accessibility compliance on all vault interfaces with keyboard navigation. Integrated blockchain technology and cryptographic security for secure data storage. Designed multiple secure vault modules with advanced encryption and multi-factor authentication.",
+        "tags": [
+            { "name": "React.js", "color": "blue-text-gradient" },
+            { "name": "React Native", "color": "green-text-gradient" },
+            { "name": "Node.js", "color": "pink-text-gradient" },
+            { "name": "MongoDB", "color": "yellow-text-gradient" },
+            { "name": "Blockchain", "color": "orange-text-gradient" },
+            { "name": "AWS", "color": "purple-text-gradient" },
+            { "name": "Firebase", "color": "teal-text-gradient" }
+        ],
+        "role": "Full Stack Developer",
+        "link": "https://www.b4igo.com/",
+        "source_code_link": ""
+    },
+    {
+        "name": "Upturn – AI Stock Advisory App | iOS & Android",
+        "description": "Developed responsive mobile interface for personalized stock recommendations. Implemented custom Robo-Portfolios with Firebase notifications and deep linking. Optimized React Native performance for iOS and Android compatibility.",
+        "tags": [
+            { "name": "React Native", "color": "blue-text-gradient" },
+            { "name": "Angular", "color": "green-text-gradient" },
+            { "name": "Firebase", "color": "pink-text-gradient" },
+            { "name": "iOS", "color": "yellow-text-gradient" },
+            { "name": "Android", "color": "orange-text-gradient" }
+        ],
+        "role": "React Native Developer - Lead",
+        "link": "https://www.upturn.io/",
+        "source_code_link": ""
+    },
+    {
+        "name": "BookingBee – AI Appointment Scheduling",
+        "description": "Developed responsive UI with Figma designs and advanced code optimization. Designed reusable components for consistency across the application. Tracked API integration progress through Jira with systematic approach.",
+        "tags": [
+            { "name": "Angular", "color": "blue-text-gradient" },
+            { "name": "Bootstrap", "color": "green-text-gradient" },
+            { "name": "Figma", "color": "pink-text-gradient" },
+            { "name": "AI", "color": "yellow-text-gradient" }
+        ],
+        "role": "Frontend Developer",
+        "link": "https://bookingbee.ai/",
+        "source_code_link": ""
+    },
+    {
         "name": "Benchmark Automation - AMD ",
         "description": "Automates the process of running, managing, and analyzing performance benchmarks for hardware components, providing faster and more accurate benchmarking results for AMD products.",
         "tags": [
@@ -435,37 +546,6 @@ const projects = [
             }
         ],
         "role": "React Native Developer"
-    },
-    {
-        "name": "Upturn",
-        "description": "A stock advisor app utilizing adaptive AI for personalized Buy and Sell recommendations, with features like custom Robo-Portfolios and financial guidance based on AI technologies.",
-        "tags": [
-            {
-                "name": "React-Native",
-                "color": "blue-text-gradient"
-            },
-            {
-                "name": "Android Studio",
-                "color": "green-text-gradient"
-            },
-            {
-                "name": "Xcode",
-                "color": "pink-text-gradient"
-            },
-            {
-                "name": "Firebase",
-                "color": "orange-text-gradient"
-            },
-            {
-                "name": "GitHub",
-                "color": "purple-text-gradient"
-            },
-            {
-                "name": "Visual Studio",
-                "color": "red-text-gradient"
-            }
-        ],
-        "role": "React Native Developer - Lead "
     },
     {
         "name": "Nova Physician Wellness Center",

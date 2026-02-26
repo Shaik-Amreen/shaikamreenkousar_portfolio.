@@ -2,7 +2,6 @@ import React,{useState} from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "./reusable/styles";
-import { githubDesktop } from "../assets";
 import { projects } from "../data";
 import { fadeIn, textVariant } from "./reusable/motion";
 
@@ -13,47 +12,28 @@ const ProjectCard = ({
     role,
     tags,
     image,
+    link,
     source_code_link,
 }) => {
-    return (
-        <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-            <Tilt
-                options={{
-                    max: 45,
-                    scale: 1,
-                    speed: 450,
-                }}
-                className='h-full  p-5 rounded-2xl sm:w-[360px] w-full border border-gray-400'
-                style={{ background: "linear-gradient(rgba(17, 24, 39, 1),rgba(61, 91, 157, 1))", }}
-            >
-                {/* <div className='relative w-full h-[230px]'>
-                    <img
-                        src={image}
-                        alt='project_image'
-                        className='w-full h-full object-cover rounded-2xl'
-                    />
+    const primaryUrl = (link && link.trim()) ? link.trim() : (source_code_link && source_code_link.trim()) ? source_code_link.trim() : null;
 
-                    <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
-                        <div
-                            onClick={() => window.open(source_code_link, "_blank")}
-                            className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
-                        >
-                            <img
-                                src={githubDesktop}
-                                alt='source code'
-                                className='w-1/2 h-1/2 object-contain'
-                            />
-                        </div>
-                    </div>
-                </div> */}
-
-                <div className='mt-5'>
+    const cardContent = (
+        <Tilt
+            options={{
+                max: 45,
+                scale: 1,
+                speed: 450,
+            }}
+            className='h-[420px] p-5 rounded-2xl sm:w-[360px] w-full border border-gray-400 flex flex-col'
+            style={{ background: "linear-gradient(rgba(17, 24, 39, 1),rgba(61, 91, 157, 1))" }}
+        >
+                <div className='mt-5 flex-1 flex flex-col'>
                     <p className='mt-2 text-secondary text-[14px]'>{role}</p>
-                    <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-                    <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+                    <h3 className='text-white font-bold text-[24px] mt-1'>{name}</h3>
+                    <p className='mt-2 text-secondary text-[14px] line-clamp-4 flex-1'>{description}</p>
                 </div>
 
-                <div className='mt-4 flex flex-wrap gap-2'>
+                <div className='mt-4 flex flex-wrap gap-2 flex-shrink-0'>
                     {tags.map((tag) => (
                         <p
                             key={`${name}-${tag.name}`}
@@ -63,7 +43,23 @@ const ProjectCard = ({
                         </p>
                     ))}
                 </div>
-            </Tilt>
+        </Tilt>
+    );
+
+    return (
+        <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} className="h-full flex">
+            {primaryUrl ? (
+                <a
+                    href={primaryUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block cursor-pointer no-underline h-full w-full"
+                >
+                    {cardContent}
+                </a>
+            ) : (
+                cardContent
+            )}
         </motion.div>
     );
 };
@@ -95,7 +91,7 @@ const Projects = () => {
                 </motion.p>
             </div>
 
-            <div className='mt-7 flex flex-wrap gap-7'>
+            <div className='mt-7 flex flex-wrap gap-7 items-stretch'>
                 {projects.map((project, index) => {
                     if (!expanded && index > 5) return null;
                     return <ProjectCard key={`project-${index}`} index={index} {...project} />
