@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Intro from '../assets/Intro.png'
+import { projects, certifications } from '../data'; // adjust path
 const textVariants = {
     initial: {
         x: -500,
@@ -50,14 +51,46 @@ const buttonVariants = {
 
 const Introduction = () => {
     const scrollToSection = (id) => {
-       
+
         const element = document.getElementById(id);
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
         }
     }
+
+    const openAllProjects = () => {
+        projects.forEach((project) => {
+            if (project.link) {
+                window.open(project.link, '_blank', 'noopener,noreferrer');
+                if (project.figmaLink) {
+                    window.open(project.figmaLink, '_blank', 'noopener,noreferrer');
+                }
+            }
+        });
+        window.open('https://instantbackend.heedsites.com/', '_blank', 'noopener,noreferrer');
+    };
+
+    const openGithub = () => {
+        window.open('https://github.com/Shaik-Amreen', '_blank', 'noopener,noreferrer');
+    };
+
+    const openAllCertifications = () => {
+        const links = certifications.filter(c => c.link).map(c => c.link);
+        links.forEach((link, i) => {
+            setTimeout(() => {
+                window.open(link, '_blank', 'noopener,noreferrer');
+            }, i * 300);
+        });
+    };
+
+    const openWork = () => {
+        openAllProjects();
+        openGithub();
+        openAllCertifications();
+    }
+
     return (
-        <div className="introBody" style={{ padding: "0rem"}}>
+        <div className="introBody" style={{ padding: "0rem" }}>
             <div className="md:px-20 lg:px-24  text-center  md:text-left  flex flex-wrap justify-evenly md:items-center introPart" style={{ paddingTop: '0rem' }} >
 
                 <div style={{ zIndex: 0 }} className="flex-1 ">
@@ -85,7 +118,19 @@ const Introduction = () => {
                                 className="p-2 px-6 rounded-full custom-gradient-border flex items-center"
                                 style={{ cursor: "pointer" }} onClick={() => { scrollToSection('contact') }}
                             >
-                                <motion.h2   >Reach out &nbsp;</motion.h2>
+                                <motion.h2>Reach out &nbsp;</motion.h2>
+                                <i class='bx bxs-chevron-down-circle '></i>
+                            </motion.button>
+
+                            <motion.button
+                                variants={buttonVariants}
+                                initial="initial"
+                                whileHover="hover"
+                                whileTap="tap"
+                                className="p-2 px-6 ml-4 rounded-full custom-gradient-border flex items-center"
+                                style={{ cursor: "pointer" }} onClick={openWork}
+                            >
+                                <motion.h2>Experience Live&nbsp;</motion.h2>
                                 <i class='bx bxs-chevron-down-circle '></i>
                             </motion.button>
 

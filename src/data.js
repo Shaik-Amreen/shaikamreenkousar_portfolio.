@@ -419,6 +419,7 @@ const projects = [
         ],
         "role": "React Native Developer - Lead",
         "link": "https://www.upturn.io/",
+        "figmaLink": "https://www.figma.com/design/GpKK2Xz5vllmzYVzdYjIOL/Upturn---Design-System?node-id=12594-5&p=f",
         "source_code_link": ""
     },
     {
